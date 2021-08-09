@@ -21,6 +21,7 @@
                 name="password"
                 required>
             <input type="submit"
+                name="submit"
                 value="login">
         </form>
         <form method="put" 
@@ -36,6 +37,7 @@
                 name="password"
                 required>
             <input type="submit"
+                name="submit"
                 value="register">
         </form>
         <form method="get" 
@@ -45,14 +47,23 @@
                 name="username"
                 required>
             <input type="submit"
+                name="submit"
                 value="does user exist">
         </form>
         <form method="get" 
-        action="/api/isloggedin"
-        onsubmit="userloggedin(event)">
+            action="/api/isloggedin"
+            onsubmit="userloggedin(event)">
+            <input type="submit"
+                name="submit"
+                value="isloggedin">
+        </form>
+        <form method="get" 
+            action="/api/logout"
+            onsubmit="userlogout(event)">
         <input type="submit"
-            value="isloggedin">
-    </form>
+            name="submit"
+            value="logout">
+        </form>
     </fieldset>
     <fieldset>
         <legend>Todo Category</legend>
@@ -60,6 +71,7 @@
             action="/api/getcat"
             onsubmit="getcategories(event)">
             <input type="submit"
+                name="submit"
                 value="get categories">
         </form>
         <form method="put" 
@@ -69,6 +81,7 @@
                 name="categoryname"
                 required>
             <input type="submit"
+                name="submit"
                 value="add category">
         </form>
         <form method="delete" 
@@ -78,6 +91,7 @@
                 name="catid"
                 value="0">
             <input type="submit"
+                name="submit"
                 value="del category">
         </form>
         <form method="patch" 
@@ -90,6 +104,7 @@
                 name="categoryname"
                 required>
             <input type="submit"
+                name="submit"
                 value="edit category">
         </form>
     </fieldset>
@@ -98,7 +113,11 @@
         <form method="get" 
             action="/api/gettodos"
             onsubmit="gettodos(event)">
+            <input type="hidden"
+                value="0"
+                name="catid">
             <input type="submit"
+                name="submit"
                 value="get todos">
         </form>
         <form method="put" 
@@ -108,6 +127,7 @@
                 name="todoitem"
                 required>
             <input type="submit"
+                name="submit"
                 value="add todos">
         </form>
         <form method="delete" 
@@ -117,6 +137,7 @@
                 name="todoid"
                 value="0">
             <input type="submit"
+                name="submit"
                 value="del todo">
         </form>
         <form method="patch" 
@@ -129,6 +150,7 @@
                 name="todoitem"
                 required>
             <input type="submit"
+                name="submit"
                 value="edit category">
         </form>
     </fieldset>

@@ -16,7 +16,9 @@ app.get('/api/isloggedin', function (req, res) {
 app.get('/api/doesuserexist', function (req, res) {
     res.send('Test doesuserexist')
 })
-
+app.get('/api/logout', function (req, res) {
+    res.send('Test logout')
+})
 
 // todo categories CRUD
 app.get('/api/getcat', function (req, res) {
@@ -34,16 +36,16 @@ app.patch('/api/updatecat/:catid', function (req, res) {
 
 // todo list CRUD
 app.get('/api/gettodos/:catid', function (req, res) {
-    res.send('Test the API')
+    res.send('Test get todos')
 })
 app.put('/api/addtodo', function (req, res) {
-    res.send('Test the API')
+    res.send('Test add todo')
 })
 app.delete('/api/deltodo/:todoid', function (req, res) {
-    res.send('Test the API')
+    res.send('Test del todo')
 })
 app.patch('/api/updatetodo/:todoid', function (req, res) {
-    res.send('Test the API')
+    res.send('Test update todo')
 })
 
 app.listen(3000)
